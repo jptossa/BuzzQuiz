@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuzzQuiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <!-- Start screen -->
+    <section id="start-screen" class="screen active">
+      <div class="badge">BuzzQuiz</div>
+      <h1>How well do you know <span id="person-name"></span>?</h1>
+      <p id="tagline" class="muted"></p>
+      <button id="start-btn" class="btn primary">Start the quiz</button>
+    </section>
+
+    <!-- Question screen -->
+    <section id="quiz-screen" class="screen">
+      <div class="quiz-header">
+        <span id="progress-text" class="muted"></span>
+        <span id="score-text" class="pill"></span>
+      </div>
+      <div class="progress"><div id="progress-bar"></div></div>
+
+      <h2 id="question-text"></h2>
+      <div id="options" class="options"></div>
+
+      <p id="fact" class="fact hidden"></p>
+      <button id="next-btn" class="btn primary hidden">Next</button>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" class="screen">
+      <div class="badge">Your result</div>
+      <div id="final-score" class="final-score"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-text" class="muted"></p>
+      <ol id="review" class="review"></ol>
+      <button id="restart-btn" class="btn primary">Play again</button>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
